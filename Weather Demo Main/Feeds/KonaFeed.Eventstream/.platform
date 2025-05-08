@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "KonaFeed"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "322189ce-dff6-83df-41d4-4d8d680e5bc8"
+  }
+}

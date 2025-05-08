@@ -1,0 +1,46 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "c8b7464f-b828-4a99-a343-5941a02b5a03",
+        "clusterUri": "",
+        "type": "Fabric",
+        "databaseItemId": "cf21fc34-2feb-9a26-4100-4a82ebbfc2ae",
+        "databaseItemName": "EHWeatherDemo"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "a81a224d-db2e-4a70-8fea-f3896542510d",
+        "content": "    .alter function PopulateReadingsTable(SourceTable: string, Location: string, TimeZoneName: string) {\n    table(SourceTable)\n    | project\n        LocationName = Location,\n        TimeZone = TimeZoneName,\n        ReadingTimeUTC = EventEnqueuedUtcTime,\n        ReadingTimeLocal = datetime_utc_to_local(EventEnqueuedUtcTime,\"America/New_York\"),\n        description = description,\n        cloudCover = cloudCover,\n        relativeHumidity = relativeHumidity,\n        uvIndex = uvIndex,\n        uvIndexDescription = uvIndexDescription,\n        daytime = daytime,\n        hasPrecipitation = hasPrecipitation,\n        iconCode = iconCode.value,\n        windSpeed = wind.speed.value,\n        windDirection = wind.direction.description,\n        windDirectionDegrees = wind.direction.degrees,\n        windGustSpeed = windGust.speed.value,\n        temperature = temperature.value,\n        apparentTemperature = apparentTemperature.value,\n        realFeelTemperature = realFeelTemperature.value,\n        realFeelTemperatureShade = realFeelTemperatureShade.value,\n        windChillTemperature = windChillTemperature.value,\n        wetBulbTemperature = wetBulbTemperature.value,\n        dewPoint = dewPoint.value,   \n        cloudCeiling = cloudCeiling.value,\n        visibility = visibility.value,\n        pressure = pressure.value,\n        pressureTendencyCode = pressureTendency.code,\n        pressureTendencyDescription = pressureTendency.description,\n        precipitationPastHour = precipitationSummary.pastHour.value\n    }",
+        "title": "Function definition",
+        "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
+      },
+      {
+        "id": "d7900ba3-3a14-4c68-93ab-cde33cd0e3c3",
+        "content": ".alter table Readings policy update '[{\"IsEnabled\": true, \"Source\": \"Atlanta_Raw\", \"Query\": \"PopulateReadingsTable(\\'Atlanta_Raw\\',\\'Atlanta\\',\\'America/New_York\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"Branson_Raw\", \"Query\": \"PopulateReadingsTable(\\'Branson_Raw\\',\\'Branson\\',\\'America/Chicago\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"Dusseldorf_Raw\", \"Query\": \"PopulateReadingsTable(\\'Dusseldorf_Raw\\',\\'Düsseldorf\\',\\'Europe/Berlin\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"Kona_Raw\", \"Query\": \"PopulateReadingsTable(\\'Kona_Raw\\',\\'Kona\\',\\'Pacific/Honolulu\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"Puslinch_Raw\", \"Query\": \"PopulateReadingsTable(\\'Puslinch_Raw\\',\\'Puslinch\\',\\'America/Toronto\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"SanAntonio_Raw\", \"Query\": \"PopulateReadingsTable(\\'SanAntonio_Raw\\',\\'San Antonio\\',\\'America/Chicago\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"Seattle_Raw\", \"Query\": \"PopulateReadingsTable(\\'Seattle_Raw\\',\\'Seattle\\',\\'America/Los_Angeles\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}, {\"IsEnabled\": true, \"Source\": \"Vienna_Raw\", \"Query\": \"PopulateReadingsTable(\\'Vienna_Raw\\',\\'Vienna\\',\\'Europe/Vienna\\')\", \"PropagateIngestionProperties\": false, \"IsTransactional\": true}]'",
+        "title": "Update Policy",
+        "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
+      },
+      {
+        "id": "38ec5c8d-0905-4563-834d-318f50aa46e4",
+        "content": ".create async  materialized-view with (backfill=true) Imperial on table Readings\n{\nReadings\n| extend ReadingMonthNumber = tostring(format_datetime(ReadingTimeLocal, 'MM'))\n| extend pressureconstant = 0.75006156130264\n| extend inchconversion = 0.03937007874015748\n| extend mileconversion = 0.621371192\n| extend footconversion = 3.28084\n| summarize by \nLocationName,\nReadingTimeUTC,\nTimeZone,\nReadingTimeLocal,\nReadingMinute = todatetime((format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH:mm'))),\nReadingHour = todatetime(strcat(format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH'),':00')),\nReadingDay = todatetime(format_datetime(ReadingTimeLocal, 'yyyy-MM-dd')),\nReadingDayNumber = tostring((format_datetime(ReadingTimeLocal, 'dd'))),\nReadingHourNumber = tostring(format_datetime(ReadingTimeLocal, 'HH')),\nReadingMinuteNumber = tostring(format_datetime(ReadingTimeLocal, 'mm')),\nReadingYearNumber = format_datetime(ReadingTimeLocal, 'yyyy'),\nReadingYear = todatetime(format_datetime(ReadingTimeLocal, 'yyyy')),\nReadingMonthNumber,\nReadingMonthNameShort = \n    case(ReadingMonthNumber == '01' , 'Jan', ReadingMonthNumber == '02' , 'Feb', ReadingMonthNumber == '03' , 'Mar', ReadingMonthNumber == '04' , 'Apr', ReadingMonthNumber == '05' , 'May', ReadingMonthNumber == '06' , 'Jun', ReadingMonthNumber == '07' , 'Jul', ReadingMonthNumber == '08' , 'Aug', ReadingMonthNumber == '09' , 'Sep', ReadingMonthNumber == '10' , 'Oct', ReadingMonthNumber == '11' , 'Nov','Dec'),\nReadingMonthName = tostring(\n    case(ReadingMonthNumber == '01' , 'January', ReadingMonthNumber == '02' , 'February', ReadingMonthNumber == '03' , 'March', ReadingMonthNumber == '04' , 'April', ReadingMonthNumber == '05' , 'May', ReadingMonthNumber == '06' , 'June', ReadingMonthNumber == '07' , 'July', ReadingMonthNumber == '08' , 'August', ReadingMonthNumber == '09' , 'September', ReadingMonthNumber == '10' , 'October', ReadingMonthNumber == '11' , 'November','December')),\nPrecipitationRate = precipitationPastHour * inchconversion /60,\nPrecipitationPastHour = precipitationPastHour * inchconversion,\nRainTime = hasPrecipitation, \nWetBulbTemperature = (wetBulbTemperature  * 1.8) + 32, \nRelativeHumidity = relativeHumidity,\nAirTemperature = (temperature  * 1.8) + 32,\nWindDirection = windDirection, \nWindDirectionDegrees = windDirectionDegrees,\nwindDirectionDegreesCat = case(windDirectionDegrees <= 22.5,8,windDirectionDegrees <= 67.5, 7, windDirectionDegrees <= 112.5, 6, windDirectionDegrees <= 157.5, 5, windDirectionDegrees <= 202.5, 4, windDirectionDegrees <= 247.5, 3, windDirectionDegrees <= 292.5, 2, windDirectionDegrees <= 337.5, 1,8),\nRealFeelTemperature = (realFeelTemperature  * 1.8) + 32,\nRealFeelTemperatureShade = (realFeelTemperatureShade  * 1.8) + 32,\nApparentTemperature = (apparentTemperature  * 1.8) + 32,\nDewPoint = (dewPoint  * 1.8) + 32,\nWindChillTemperature = (windChillTemperature  * 1.8) + 32,\nWindGust = windGustSpeed * mileconversion, \nWindSpeed = windSpeed * mileconversion, \nDaylightMinutes = daytime,\nPressure=pressure * pressureconstant,\nPressureTrend = pressureTendencyCode,\nPressureTrendDescription = pressureTendencyDescription,\nCloudCeiling = cloudCeiling * footconversion,\nCloudCover = cloudCover,\nDescription = description,\nIconCode = iconCode,\nUVIndex = uvIndex,\nUVIndexDescription = uvIndexDescription\n}",
+        "title": "Mat View - Imperial",
+        "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
+      },
+      {
+        "id": "fe2d6233-7d03-4fc4-9027-beb28161c4a0",
+        "content": ".append Readings <| PopulateReadingsTable(\"Seattle_Raw\", \"Seattle\", \"America/Los_Angeles\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Atlanta_Raw\", \"Atlanta\", \"America/New_York\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Branson_Raw\", \"Branson\", \"America/Chicago\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Dusseldorf_Raw\", \"Düsseldorf\", \"Europe/Berlin\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Kona_Raw\", \"Kona\", \"Pacific/Honolulu\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Puslinch_Raw\", \"Puslinch\", \"America/Toronto\")  | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"SanAntonio_Raw\", \"San Antonio\", \"America/Chicago\")  | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Vienna_Raw\", \"Vienna\", \"Europe/Vienna\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n",
+        "title": "",
+        "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
+      },
+      {
+        "id": "103042a3-0e82-4c1c-9bc7-01d60040e91d",
+        "content": "Imperial",
+        "title": "",
+        "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
+      }
+    ]
+  }
+}

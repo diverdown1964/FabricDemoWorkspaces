@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "WeatherMonitor",
+    "description": "WeatherMonitor"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "66141aac-a314-9602-48a4-c655190a207f"
+  }
+}

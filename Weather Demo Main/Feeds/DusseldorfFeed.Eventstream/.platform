@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "DusseldorfFeed"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d04d676c-1a30-932e-47e7-b4ba3fb9f371"
+  }
+}

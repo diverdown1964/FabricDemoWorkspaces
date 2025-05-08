@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "PuslinchFeed"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a712e026-03c9-8962-4f9d-cb5ff16898d1"
+  }
+}

@@ -1,0 +1,1017 @@
+{
+  "schema_version": "60",
+  "tiles": [
+    {
+      "id": "354a0590-ae41-4c1b-add1-e790e196fdc1",
+      "title": "Temperature",
+      "visualType": "line",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 0,
+        "y": 3,
+        "width": 6,
+        "height": 6
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "acec3c39-b8f1-435f-9a06-2334429ba307"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": [
+          "AirTemperature"
+        ],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "f1745bf3-c0c8-480b-9dbf-f832cb569f49",
+      "title": "Air Temperature",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 6,
+        "y": 3,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "949a41b4-44a2-4578-9e6b-63c457d5f5b6"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "AirTemperature",
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "37239d91-e34f-4da5-a0be-f4198bbb18a4",
+      "title": "New tile",
+      "hideTitle": true,
+      "visualType": "markdown",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 6,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3e64ba41-fea2-4946-abc3-0c4f2a62c796"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "6f1e6fc5-3f6c-479f-b66a-93b30f342505",
+      "title": "Latest Readings",
+      "visualType": "markdown",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "width": 6,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "46db0617-47f9-4c50-8d9a-54cc26f33656"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "29ad2fb9-2cbe-4588-96a7-7619acf94941",
+      "title": "Pressure",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 9,
+        "y": 3,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ea689014-b6cc-4c7d-8a19-eecc4a4a3fa4"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "Pressure",
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "1b0af7ce-e5b7-4781-a06f-2fde5b460efb",
+      "title": "Pressure trend",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 6,
+        "y": 12,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "25b6e119-7113-4c44-a002-5e4c8c6fefd5"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "PressureTrendDescription",
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "58b0c93c-5f42-420d-bf79-d4c056a4de9f",
+      "title": "Pressure",
+      "visualType": "line",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 0,
+        "y": 9,
+        "width": 6,
+        "height": 6
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "944c922c-57c2-4957-b2ee-6e25894dba4e"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": "TimeBucket",
+        "yColumns": [
+          "Pressure"
+        ],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "cd4af94e-abdf-4cf5-bc6b-373fb71a63e4",
+      "title": "Precipitation",
+      "visualType": "column",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 0,
+        "y": 15,
+        "width": 6,
+        "height": 6
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "8f3ad076-0a81-41c8-afb0-654bb61b96bf"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": "TimeBucket",
+        "yColumns": [
+          "Precipitation"
+        ],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "26a321bd-d407-4a52-a914-53d8c1952daf",
+      "title": "New tile",
+      "hideTitle": true,
+      "visualType": "markdown",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "width": 6,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "114216a0-d269-418e-99dd-cb8d5f5aeb51"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "6821f180-90ef-46ad-89dc-d92b8b972c8b",
+      "title": "Total Precipitation",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 15,
+        "y": 6,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "4c3ff2f2-02ed-478e-bfb5-6b423957c876"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "c3f35f13-1e00-4ab4-9dd0-096d51a71b5e",
+      "title": "Max Temp",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 12,
+        "y": 6,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "7595bc2c-11ed-4037-aabe-9a4d0b89d735"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "e55273c6-258d-4a7f-9c3a-0e30be97d2bf",
+      "title": "Min Temp",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 12,
+        "y": 9,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "622584aa-ebe9-446e-a581-eafa2099e7ec"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "53bcf29e-e4ee-487d-987a-50cdcc79ef52",
+      "title": "Avg Temp",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 12,
+        "y": 3,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "64c9106e-cb41-454a-b0c7-b74f4943aaad"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "3b65c45a-0796-40aa-b686-8bbe0616898b",
+      "title": "Cloud Cover",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 6,
+        "y": 6,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "c45a97d1-566c-40d0-bd78-9ff8e266feab"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "CloudCover",
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "43787454-d2c4-499d-b211-34a8e5b8d387",
+      "title": "Avg Cloud Cover",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 15,
+        "y": 9,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a1befe49-1d9c-4bc5-854d-0a8bfb1a08d2"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "633aa4d6-b109-44d8-8b13-0a9c9d8aba06",
+      "title": "Rain duration (minutes)",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 15,
+        "y": 3,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "4bdf3969-9a7b-4bc4-808e-57c77849a888"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "c99995ae-ad2f-42e5-bb2c-d3e24ddbd986",
+      "title": "Relative Humidity",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 9,
+        "y": 6,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "351f2715-a0ad-4c91-8d1c-1c86c397332c"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "4276ddb7-1c90-4ca8-aeb3-ae768ccbc2e8",
+      "title": "Wind Speed",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 6,
+        "y": 9,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ebc4ea28-d13b-4068-b8db-5405abffb345"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "WindSpeed",
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "300ecde5-5d9f-4767-b944-ec5da2c834ad",
+      "title": "Wind Direction",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 9,
+        "y": 9,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2a637829-6fcf-4203-8358-18cbe37ec598"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "WindDirection",
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "ba92ea10-3664-4037-9794-cefd6bf3c23d",
+      "title": "UV Index",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 9,
+        "y": 12,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "18128e62-ed33-4437-ab18-4eab9498087d"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "UVIndexDescription",
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "3269c321-bf87-427c-9f25-0cf1e0ce178f",
+      "title": "Daylight Hours",
+      "visualType": "card",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 15,
+        "y": 12,
+        "width": 3,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "0c45e902-46cd-4221-851b-9961579a3271"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "colorRules": []
+      }
+    },
+    {
+      "id": "251099e2-c839-46c1-8d81-06191e80c161",
+      "title": "Cloud Cover",
+      "visualType": "line",
+      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
+      "layout": {
+        "x": 6,
+        "y": 15,
+        "width": 6,
+        "height": 6
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "61fb6d8a-2c0f-4a16-ba7d-6e05aaa3a987"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": [
+          "CloudCover"
+        ],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "drillthrough": []
+      }
+    }
+  ],
+  "baseQueries": [
+    {
+      "id": "14eca92c-bfa1-4909-9216-66fa2dee42b5",
+      "queryId": "91c1703e-55a3-4bbf-b4e2-1c77405642b6",
+      "variableName": "BasicQuery"
+    },
+    {
+      "id": "84cf89f4-b61c-4719-bc0e-85a23fe60b94",
+      "queryId": "3d39584d-46f2-4fd8-94b2-906224aec5c8",
+      "variableName": "LatestReading"
+    }
+  ],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "88d3ee6a-19d9-4514-9f56-a089c927973b",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 24,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    },
+    {
+      "kind": "string",
+      "id": "d9149f0f-4942-40cb-a356-75a022e4f9c2",
+      "displayName": "Units",
+      "description": "",
+      "variableName": "Units",
+      "selectionType": "scalar",
+      "includeAllOption": false,
+      "defaultValue": {
+        "kind": "value",
+        "value": "Metric"
+      },
+      "dataSource": {
+        "kind": "static",
+        "values": [
+          {
+            "value": "Metric"
+          },
+          {
+            "value": "Imperial"
+          }
+        ]
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    },
+    {
+      "kind": "string",
+      "id": "6e1ef05b-e004-4371-af97-9c0c13fb5bd6",
+      "displayName": "Location",
+      "description": "",
+      "variableName": "Location",
+      "selectionType": "scalar",
+      "includeAllOption": false,
+      "defaultValue": {
+        "kind": "value",
+        "value": "Puslinch"
+      },
+      "dataSource": {
+        "kind": "query",
+        "columns": {
+          "value": "LocationName"
+        },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "e512d68d-8def-442b-8fc9-c62727e8bf09"
+        }
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    },
+    {
+      "kind": "string",
+      "id": "86e7fcd8-be24-4207-a0f1-a671ad8f4d64",
+      "displayName": "Time bucket",
+      "description": "",
+      "variableName": "TimeBucket",
+      "selectionType": "scalar",
+      "includeAllOption": false,
+      "defaultValue": {
+        "kind": "value",
+        "value": "10m"
+      },
+      "dataSource": {
+        "kind": "static",
+        "values": [
+          {
+            "value": "5 m"
+          },
+          {
+            "value": "10m"
+          },
+          {
+            "value": "15m"
+          },
+          {
+            "value": "30m"
+          },
+          {
+            "value": "1h"
+          },
+          {
+            "value": "2h"
+          },
+          {
+            "value": "12h"
+          },
+          {
+            "value": "1d"
+          }
+        ]
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8",
+      "kind": "kusto-trident",
+      "clusterUri": "",
+      "database": "cf21fc34-2feb-9a26-4100-4a82ebbfc2ae",
+      "name": "EHWeatherDemo",
+      "scopeId": "kusto-trident",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "59f0091f-d0e5-45c3-8d42-010355b43822"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| extend TimeBucket = bin(ReadingTimeLocal, totimespan(TimeBucket))\n| summarize \n    AirTemperature = avg(AirTemperature), count() by TimeBucket\n| order by TimeBucket",
+      "id": "acec3c39-b8f1-435f-9a06-2334429ba307",
+      "usedVariables": [
+        "BasicQuery",
+        "TimeBucket"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading",
+      "id": "949a41b4-44a2-4578-9e6b-63c457d5f5b6",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery \n| take 1 \n| project LocationName\n| extend result = strcat(\"# \", LocationName)\n| project result",
+      "id": "3e64ba41-fea2-4946-abc3-0c4f2a62c796",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading\n| project strcat(\"## As of \", format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH:mm:ss'), \") - \", Description)\n",
+      "id": "46db0617-47f9-4c50-8d9a-54cc26f33656",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading",
+      "id": "ea689014-b6cc-4c7d-8a19-eecc4a4a3fa4",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading",
+      "id": "25b6e119-7113-4c44-a002-5e4c8c6fefd5",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| extend TimeBucket = bin(ReadingTimeLocal, totimespan(TimeBucket))\n| summarize \n    Pressure = avg(Pressure), count() by TimeBucket\n| order by TimeBucket",
+      "id": "944c922c-57c2-4957-b2ee-6e25894dba4e",
+      "usedVariables": [
+        "BasicQuery",
+        "TimeBucket"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| extend TimeBucket = bin(ReadingTimeLocal, totimespan(TimeBucket))\n| summarize \n    Precipitation = sum(PrecipitationRate), count() by TimeBucket\n| order by TimeBucket",
+      "id": "8f3ad076-0a81-41c8-afb0-654bb61b96bf",
+      "usedVariables": [
+        "BasicQuery",
+        "TimeBucket"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "print \"## Aggregate Values\"",
+      "id": "114216a0-d269-418e-99dd-cb8d5f5aeb51",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize Precipitation = round(sum(PrecipitationRate), 2)",
+      "id": "4c3ff2f2-02ed-478e-bfb5-6b423957c876",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize MaxTemperature = round(max(AirTemperature), 1)",
+      "id": "7595bc2c-11ed-4037-aabe-9a4d0b89d735",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize MinTemperature = round(min(AirTemperature), 1)",
+      "id": "622584aa-ebe9-446e-a581-eafa2099e7ec",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize AvgTemperature = round(avg(AirTemperature), 1)",
+      "id": "64c9106e-cb41-454a-b0c7-b74f4943aaad",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading\n| project CloudCover = strcat(CloudCover, \" %\")",
+      "id": "c45a97d1-566c-40d0-bd78-9ff8e266feab",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize AvgCloud = strcat(tostring(round(avg(CloudCover), 2)), \" %\")",
+      "id": "a1befe49-1d9c-4bc5-854d-0a8bfb1a08d2",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize RainTime = sum(RainTime)",
+      "id": "4bdf3969-9a7b-4bc4-808e-57c77849a888",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading\n| project Humidity = strcat(RelativeHumidity, \" %\")",
+      "id": "351f2715-a0ad-4c91-8d1c-1c86c397332c",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading",
+      "id": "ebc4ea28-d13b-4068-b8db-5405abffb345",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading",
+      "id": "2a637829-6fcf-4203-8358-18cbe37ec598",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "LatestReading",
+      "id": "18128e62-ed33-4437-ab18-4eab9498087d",
+      "usedVariables": [
+        "LatestReading"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| summarize DaylightHours = round(sum(DaylightMinutes)/60, 2)",
+      "id": "0c45e902-46cd-4221-851b-9961579a3271",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery\n| extend TimeBucket = bin(ReadingTimeLocal, totimespan(TimeBucket))\n| summarize \n    CloudCover = avg(CloudCover), count() by TimeBucket\n| order by TimeBucket",
+      "id": "61fb6d8a-2c0f-4a16-ba7d-6e05aaa3a987",
+      "usedVariables": [
+        "BasicQuery",
+        "TimeBucket"
+      ]
+    },
+    {
+      "id": "91c1703e-55a3-4bbf-b4e2-1c77405642b6",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "table(Units)\n| where ReadingTimeUTC  between (['_startTime'] .. ['_endTime'])\n| where LocationName == Location",
+      "usedVariables": [
+        "Location",
+        "Units",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "id": "3d39584d-46f2-4fd8-94b2-906224aec5c8",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "BasicQuery \n| order by ReadingTimeUTC desc\n| take 1",
+      "usedVariables": [
+        "BasicQuery"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
+      },
+      "text": "Readings \n| summarize by LocationName\n",
+      "id": "e512d68d-8def-442b-8fc9-c62727e8bf09",
+      "usedVariables": []
+    }
+  ]
+}

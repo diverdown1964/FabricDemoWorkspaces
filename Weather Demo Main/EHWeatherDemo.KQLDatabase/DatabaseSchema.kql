@@ -1,0 +1,151 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table SeattleRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table DusseldorfRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table AtlantaRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table PuslinchRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table BransonRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table KonaRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table SanAntonioRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table ViennaRaw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Readings (LocationName:string, TimeZone:string, ReadingTimeUTC:datetime, ReadingTimeLocal:datetime, description:string, cloudCover:int, relativeHumidity:int, uvIndex:int, uvIndexDescription:string, daytime:int, hasPrecipitation:int, iconCode:int, windSpeed:real, windDirection:string, windDirectionDegrees:int, windGustSpeed:real, temperature:real, apparentTemperature:real, realFeelTemperature:real, realFeelTemperatureShade:real, windChillTemperature:real, wetBulbTemperature:real, dewPoint:real, cloudCeiling:int, visibility:real, pressure:real, pressureTendencyCode:string, pressureTendencyDescription:string, precipitationPastHour:real) 
+.create-merge table Atlanta_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Branson_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Dusseldorf_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Kona_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Puslinch_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table SanAntonio_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Seattle_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table Vienna_Raw (dateTime:string, windGust:dynamic, description:string, apparentTemperature:dynamic, temperature:dynamic, uvIndexDescription:string, obstructionsToVisibility:string, cloudCeiling:dynamic, wetBulbTemperature:dynamic, visibility:dynamic, windChillTemperature:dynamic, cloudCover:long, pressure:dynamic, dewPoint:dynamic, pressureTendency:dynamic, hasPrecipitation:long, pastTwentyFourHourTemperatureDeparture:dynamic, precipitationSummary:dynamic, temperatureSummary:dynamic, relativeHumidity:long, iconCode:dynamic, realFeelTemperatureShade:dynamic, uvIndex:long, realFeelTemperature:dynamic, daytime:long, wind:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-or-alter function with (skipvalidation = "true") PopulateReadingsTable(SourceTable:string, Location:string, TimeZoneName:string) {
+    table(SourceTable)
+    | project
+        LocationName = Location,
+        TimeZone = TimeZoneName,
+        ReadingTimeUTC = EventEnqueuedUtcTime,
+        ReadingTimeLocal = datetime_utc_to_local(EventEnqueuedUtcTime, TimeZoneName),
+        description = tostring(description),
+        cloudCover = toint(cloudCover),
+        relativeHumidity = toint(relativeHumidity),
+        uvIndex = toint(uvIndex),
+        uvIndexDescription = tostring(uvIndexDescription),
+        daytime = toint(daytime),
+        hasPrecipitation = toint(hasPrecipitation),
+        iconCode = toint(iconCode.value),
+        windSpeed = toreal(wind.speed.value),
+        windDirection = tostring(wind.direction.description),
+        windDirectionDegrees = toint(wind.direction.degrees),
+        windGustSpeed = toreal(windGust.speed.value),
+        temperature = toreal(temperature.value),
+        apparentTemperature = toreal(apparentTemperature.value),
+        realFeelTemperature = toreal(realFeelTemperature.value),
+        realFeelTemperatureShade = toreal(realFeelTemperatureShade.value),
+        windChillTemperature = toreal(windChillTemperature.value),
+        wetBulbTemperature = toreal(wetBulbTemperature.value),
+        dewPoint = toreal(dewPoint.value),   
+        cloudCeiling = toint(cloudCeiling.value),
+        visibility = toreal(visibility.value),
+        pressure = toreal(pressure.value),
+        pressureTendencyCode = tostring(pressureTendency.code),
+        pressureTendencyDescription = tostring(pressureTendency.description),
+        precipitationPastHour = toreal(precipitationSummary.pastHour.value)
+    }
+.create-or-alter materialized-view  Metric on table Readings { Readings
+| extend ReadingMonthNumber = tostring(format_datetime(ReadingTimeLocal, 'MM'))
+| summarize by 
+LocationName,
+ReadingTimeUTC,
+TimeZone,
+ReadingTimeLocal,
+ReadingMinute = todatetime((format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH:mm'))),
+ReadingHour = todatetime(strcat(format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH'),':00')),
+ReadingDay = todatetime(format_datetime(ReadingTimeLocal, 'yyyy-MM-dd')),
+ReadingDayNumber = tostring((format_datetime(ReadingTimeLocal, 'dd'))),
+ReadingHourNumber = tostring(format_datetime(ReadingTimeLocal, 'HH')),
+ReadingMinuteNumber = tostring(format_datetime(ReadingTimeLocal, 'mm')),
+ReadingYearNumber = format_datetime(ReadingTimeLocal, 'yyyy'),
+ReadingYear = todatetime(format_datetime(ReadingTimeLocal, 'yyyy')),
+ReadingMonthNumber,
+ReadingMonthNameShort = 
+    case(ReadingMonthNumber == '01' , 'Jan', ReadingMonthNumber == '02' , 'Feb', ReadingMonthNumber == '03' , 'Mar', ReadingMonthNumber == '04' , 'Apr', ReadingMonthNumber == '05' , 'May', ReadingMonthNumber == '06' , 'Jun', ReadingMonthNumber == '07' , 'Jul', ReadingMonthNumber == '08' , 'Aug', ReadingMonthNumber == '09' , 'Sep', ReadingMonthNumber == '10' , 'Oct', ReadingMonthNumber == '11' , 'Nov','Dec'),
+ReadingMonthName = tostring(
+    case(ReadingMonthNumber == '01' , 'January', ReadingMonthNumber == '02' , 'February', ReadingMonthNumber == '03' , 'March', ReadingMonthNumber == '04' , 'April', ReadingMonthNumber == '05' , 'May', ReadingMonthNumber == '06' , 'June', ReadingMonthNumber == '07' , 'July', ReadingMonthNumber == '08' , 'August', ReadingMonthNumber == '09' , 'September', ReadingMonthNumber == '10' , 'October', ReadingMonthNumber == '11' , 'November','December')),
+PrecipitationRate = precipitationPastHour/60,
+PrecipitationPastHour = precipitationPastHour,
+RainTime = hasPrecipitation, 
+WetBulbTemperature = wetBulbTemperature, 
+RelativeHumidity = relativeHumidity,
+AirTemperature = temperature,
+WindDirection = windDirection, 
+WindDirectionDegrees = windDirectionDegrees,
+windDirectionDegreesCat = case(windDirectionDegrees <= 22.5,8,windDirectionDegrees <= 67.5, 7, windDirectionDegrees <= 112.5, 6, windDirectionDegrees <= 157.5, 5, windDirectionDegrees <= 202.5, 4, windDirectionDegrees <= 247.5, 3, windDirectionDegrees <= 292.5, 2, windDirectionDegrees <= 337.5, 1,8),
+RealFeelTemperature = realFeelTemperature,
+RealFeelTemperatureShade = realFeelTemperatureShade,
+ApparentTemperature = apparentTemperature,
+DewPoint = dewPoint,
+WindChillTemperature = windChillTemperature,
+WindGust = windGustSpeed, 
+WindSpeed = windSpeed, 
+DaylightMinutes = daytime,
+Pressure=pressure,
+PressureTrend = pressureTendencyCode,
+PressureTrendDescription = pressureTendencyDescription,
+CloudCeiling = cloudCeiling,
+CloudCover = cloudCover,
+Description = description,
+IconCode = iconCode,
+UVIndex = uvIndex,
+UVIndexDescription = uvIndexDescription }
+.create-or-alter materialized-view  Imperial on table Readings { Readings
+| extend ReadingMonthNumber = tostring(format_datetime(ReadingTimeLocal, 'MM'))
+| extend pressureconstant = 0.75006156130264
+| extend inchconversion = 0.03937007874015748
+| extend mileconversion = 0.621371192
+| extend footconversion = 3.28084
+| summarize by 
+LocationName,
+ReadingTimeUTC,
+TimeZone,
+ReadingTimeLocal,
+ReadingMinute = todatetime((format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH:mm'))),
+ReadingHour = todatetime(strcat(format_datetime(ReadingTimeLocal, 'yyyy-MM-dd HH'),':00')),
+ReadingDay = todatetime(format_datetime(ReadingTimeLocal, 'yyyy-MM-dd')),
+ReadingDayNumber = tostring((format_datetime(ReadingTimeLocal, 'dd'))),
+ReadingHourNumber = tostring(format_datetime(ReadingTimeLocal, 'HH')),
+ReadingMinuteNumber = tostring(format_datetime(ReadingTimeLocal, 'mm')),
+ReadingYearNumber = format_datetime(ReadingTimeLocal, 'yyyy'),
+ReadingYear = todatetime(format_datetime(ReadingTimeLocal, 'yyyy')),
+ReadingMonthNumber,
+ReadingMonthNameShort = 
+    case(ReadingMonthNumber == '01' , 'Jan', ReadingMonthNumber == '02' , 'Feb', ReadingMonthNumber == '03' , 'Mar', ReadingMonthNumber == '04' , 'Apr', ReadingMonthNumber == '05' , 'May', ReadingMonthNumber == '06' , 'Jun', ReadingMonthNumber == '07' , 'Jul', ReadingMonthNumber == '08' , 'Aug', ReadingMonthNumber == '09' , 'Sep', ReadingMonthNumber == '10' , 'Oct', ReadingMonthNumber == '11' , 'Nov','Dec'),
+ReadingMonthName = tostring(
+    case(ReadingMonthNumber == '01' , 'January', ReadingMonthNumber == '02' , 'February', ReadingMonthNumber == '03' , 'March', ReadingMonthNumber == '04' , 'April', ReadingMonthNumber == '05' , 'May', ReadingMonthNumber == '06' , 'June', ReadingMonthNumber == '07' , 'July', ReadingMonthNumber == '08' , 'August', ReadingMonthNumber == '09' , 'September', ReadingMonthNumber == '10' , 'October', ReadingMonthNumber == '11' , 'November','December')),
+PrecipitationRate = precipitationPastHour * inchconversion /60,
+PrecipitationPastHour = precipitationPastHour * inchconversion,
+RainTime = hasPrecipitation, 
+WetBulbTemperature = (wetBulbTemperature  * 1.8) + 32, 
+RelativeHumidity = relativeHumidity,
+AirTemperature = (temperature  * 1.8) + 32,
+WindDirection = windDirection, 
+WindDirectionDegrees = windDirectionDegrees,
+windDirectionDegreesCat = case(windDirectionDegrees <= 22.5,8,windDirectionDegrees <= 67.5, 7, windDirectionDegrees <= 112.5, 6, windDirectionDegrees <= 157.5, 5, windDirectionDegrees <= 202.5, 4, windDirectionDegrees <= 247.5, 3, windDirectionDegrees <= 292.5, 2, windDirectionDegrees <= 337.5, 1,8),
+RealFeelTemperature = (realFeelTemperature  * 1.8) + 32,
+RealFeelTemperatureShade = (realFeelTemperatureShade  * 1.8) + 32,
+ApparentTemperature = (apparentTemperature  * 1.8) + 32,
+DewPoint = (dewPoint  * 1.8) + 32,
+WindChillTemperature = (windChillTemperature  * 1.8) + 32,
+WindGust = windGustSpeed * mileconversion, 
+WindSpeed = windSpeed * mileconversion, 
+DaylightMinutes = daytime,
+Pressure=pressure * pressureconstant,
+PressureTrend = pressureTendencyCode,
+PressureTrendDescription = pressureTendencyDescription,
+CloudCeiling = cloudCeiling * footconversion,
+CloudCover = cloudCover,
+Description = description,
+IconCode = iconCode,
+UVIndex = uvIndex,
+UVIndexDescription = uvIndexDescription }
+.alter table Readings policy update "[{\"IsEnabled\":true,\"Source\":\"Atlanta_Raw\",\"Query\":\"PopulateReadingsTable(\'Atlanta_Raw\',\'Atlanta\',\'America/New_York\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"Branson_Raw\",\"Query\":\"PopulateReadingsTable(\'Branson_Raw\',\'Branson\',\'America/Chicago\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"Dusseldorf_Raw\",\"Query\":\"PopulateReadingsTable(\'Dusseldorf_Raw\',\'Düsseldorf\',\'Europe/Berlin\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"Kona_Raw\",\"Query\":\"PopulateReadingsTable(\'Kona_Raw\',\'Kona\',\'Pacific/Honolulu\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"Puslinch_Raw\",\"Query\":\"PopulateReadingsTable(\'Puslinch_Raw\',\'Puslinch\',\'America/Toronto\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"SanAntonio_Raw\",\"Query\":\"PopulateReadingsTable(\'SanAntonio_Raw\',\'San Antonio\',\'America/Chicago\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"Seattle_Raw\",\"Query\":\"PopulateReadingsTable(\'Seattle_Raw\',\'Seattle\',\'America/Los_Angeles\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null},{\"IsEnabled\":true,\"Source\":\"Vienna_Raw\",\"Query\":\"PopulateReadingsTable(\'Vienna_Raw\',\'Vienna\',\'Europe/Vienna\')\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null}]"

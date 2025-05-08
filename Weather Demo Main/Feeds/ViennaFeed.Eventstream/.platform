@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "ViennaFeed"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3883bab5-b8bd-9b23-4202-5b83885d7d15"
+  }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Readings",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/Readings",
+        "itemId": "cf21fc34-2feb-9a26-4100-4a82ebbfc2ae",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "KustoDatabase"
+      }
+    }
+  }
+]

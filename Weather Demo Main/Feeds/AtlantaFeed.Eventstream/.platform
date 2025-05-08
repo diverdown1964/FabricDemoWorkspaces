@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "AtlantaFeed"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "85e0153d-251a-9f55-4b30-b35d495abba5"
+  }
+}
