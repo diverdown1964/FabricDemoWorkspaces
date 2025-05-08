@@ -3,7 +3,7 @@
   "tiles": [
     {
       "id": "354a0590-ae41-4c1b-add1-e790e196fdc1",
-      "title": "Temperature1",
+      "title": "Temperature",
       "visualType": "line",
       "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
       "layout": {
@@ -582,9 +582,9 @@
         "seriesColumns": null,
         "xAxisScale": "linear",
         "verticalLine": "",
-        "crossFilter": [],
         "crossFilterDisabled": false,
         "drillthroughDisabled": false,
+        "crossFilter": [],
         "drillthrough": []
       }
     }
