@@ -3,7 +3,7 @@
   "tiles": [
     {
       "id": "354a0590-ae41-4c1b-add1-e790e196fdc1",
-      "title": "Temperature",
+      "title": "Temperature1",
       "visualType": "line",
       "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
       "layout": {
