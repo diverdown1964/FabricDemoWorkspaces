@@ -1,5 +1,9 @@
 {
   "schema_version": "60",
+  "autoRefresh": {
+    "enabled": true,
+    "defaultInterval": "30s"
+  },
   "tiles": [
     {
       "id": "354a0590-ae41-4c1b-add1-e790e196fdc1",
@@ -128,29 +132,6 @@
       "visualOptions": {
         "multiStat__textSize": "auto",
         "multiStat__valueColumn": "Pressure",
-        "colorRulesDisabled": false,
-        "colorStyle": "light",
-        "colorRules": []
-      }
-    },
-    {
-      "id": "1b0af7ce-e5b7-4781-a06f-2fde5b460efb",
-      "title": "Pressure trend",
-      "visualType": "card",
-      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
-      "layout": {
-        "x": 6,
-        "y": 12,
-        "width": 3,
-        "height": 3
-      },
-      "queryRef": {
-        "kind": "query",
-        "queryId": "25b6e119-7113-4c44-a002-5e4c8c6fefd5"
-      },
-      "visualOptions": {
-        "multiStat__textSize": "auto",
-        "multiStat__valueColumn": "PressureTrendDescription",
         "colorRulesDisabled": false,
         "colorStyle": "light",
         "colorRules": []
@@ -498,29 +479,6 @@
       }
     },
     {
-      "id": "ba92ea10-3664-4037-9794-cefd6bf3c23d",
-      "title": "UV Index",
-      "visualType": "card",
-      "pageId": "59f0091f-d0e5-45c3-8d42-010355b43822",
-      "layout": {
-        "x": 9,
-        "y": 12,
-        "width": 3,
-        "height": 3
-      },
-      "queryRef": {
-        "kind": "query",
-        "queryId": "18128e62-ed33-4437-ab18-4eab9498087d"
-      },
-      "visualOptions": {
-        "multiStat__textSize": "auto",
-        "multiStat__valueColumn": "UVIndexDescription",
-        "colorRulesDisabled": false,
-        "colorStyle": "light",
-        "colorRules": []
-      }
-    },
-    {
       "id": "3269c321-bf87-427c-9f25-0cf1e0ce178f",
       "title": "Daylight Hours",
       "visualType": "card",
@@ -628,16 +586,16 @@
       "includeAllOption": false,
       "defaultValue": {
         "kind": "value",
-        "value": "Metric"
+        "value": "AllMetric"
       },
       "dataSource": {
         "kind": "static",
         "values": [
           {
-            "value": "Metric"
+            "value": "AllMetric"
           },
           {
-            "value": "Imperial"
+            "value": "AllImperial"
           }
         ]
       },
@@ -796,17 +754,6 @@
         "kind": "inline",
         "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
       },
-      "text": "LatestReading",
-      "id": "25b6e119-7113-4c44-a002-5e4c8c6fefd5",
-      "usedVariables": [
-        "LatestReading"
-      ]
-    },
-    {
-      "dataSource": {
-        "kind": "inline",
-        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
-      },
       "text": "BasicQuery\n| extend TimeBucket = bin(ReadingTimeLocal, totimespan(TimeBucket))\n| summarize \n    Pressure = avg(Pressure), count() by TimeBucket\n| order by TimeBucket",
       "id": "944c922c-57c2-4957-b2ee-6e25894dba4e",
       "usedVariables": [
@@ -941,17 +888,6 @@
       },
       "text": "LatestReading",
       "id": "2a637829-6fcf-4203-8358-18cbe37ec598",
-      "usedVariables": [
-        "LatestReading"
-      ]
-    },
-    {
-      "dataSource": {
-        "kind": "inline",
-        "dataSourceId": "cdaf0966-644a-4c7b-b108-7ad2fc794bd8"
-      },
-      "text": "LatestReading",
-      "id": "18128e62-ed33-4437-ab18-4eab9498087d",
       "usedVariables": [
         "LatestReading"
       ]

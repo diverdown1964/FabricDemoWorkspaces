@@ -32,18 +32,24 @@
       {
         "id": "fe2d6233-7d03-4fc4-9027-beb28161c4a0",
         "content": ".append Readings <| PopulateReadingsTable(\"Seattle_Raw\", \"Seattle\", \"America/Los_Angeles\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Atlanta_Raw\", \"Atlanta\", \"America/New_York\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Branson_Raw\", \"Branson\", \"America/Chicago\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Dusseldorf_Raw\", \"Düsseldorf\", \"Europe/Berlin\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Kona_Raw\", \"Kona\", \"Pacific/Honolulu\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Puslinch_Raw\", \"Puslinch\", \"America/Toronto\")  | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"SanAntonio_Raw\", \"San Antonio\", \"America/Chicago\")  | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n.append Readings <| PopulateReadingsTable(\"Vienna_Raw\", \"Vienna\", \"Europe/Vienna\") | where ReadingTimeUTC < todatetime('2025-04-23T10:56:07.325Z')\n",
-        "title": "",
+        "title": "Populating",
         "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
       },
       {
         "id": "103042a3-0e82-4c1c-9bc7-01d60040e91d",
-        "content": "Imperial",
+        "content": "\n.execute database script <|\n.alter-merge table Atlanta_Raw policy retention softdelete = 7d\n.alter-merge table Branson_Raw policy retention softdelete = 7d\n.alter-merge table Dusseldorf_Raw policy retention softdelete = 7d\n.alter-merge table Kona_Raw policy retention softdelete = 7d\n.alter-merge table Puslinch_Raw policy retention softdelete = 7d\n.alter-merge table SanAntonio_Raw policy retention softdelete = 7d\n.alter-merge table Seattle_Raw policy retention softdelete = 7d\n.alter-merge table Vienna_Raw policy retention softdelete = 7d\n\n",
+        "title": "Retention Policies",
+        "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
+      },
+      {
+        "id": "4a52b1ec-30c9-4330-ba58-4e2435f128cf",
+        "content": "\n.show table Atlanta_Raw policy caching\n",
         "title": "",
         "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
       },
       {
-        "id": "2a0dde1a-b2ba-49b3-8e2f-9b5d607cc200",
-        "content": "",
+        "id": "3e534a98-eb19-442f-b722-230819a47309",
+        "content": "PopulateAllReadingsTable(\"Vienna_Raw\",\"Vienna\",\"Europe/Vienna\") \n| take 100",
         "title": "",
         "dataSourceId": "c8b7464f-b828-4a99-a343-5941a02b5a03"
       }
