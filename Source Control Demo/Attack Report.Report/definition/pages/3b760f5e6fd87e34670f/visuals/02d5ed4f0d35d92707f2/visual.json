@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "02d5ed4f0d35d92707f2",
   "position": {
     "x": 572.39954075774972,
@@ -23,7 +23,7 @@
                       "Entity": "Attacks"
                     }
                   },
-                  "Property": "All Attacks"
+                  "Property": "Total Attacks"
                 }
               },
               "queryRef": "Attacks.Total Attacks",
