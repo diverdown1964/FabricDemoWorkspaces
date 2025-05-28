@@ -23,7 +23,7 @@
                       "Entity": "Attacks"
                     }
                   },
-                  "Property": "Total Attacks"
+                  "Property": "All Attacks"
                 }
               },
               "queryRef": "Attacks.Total Attacks",
