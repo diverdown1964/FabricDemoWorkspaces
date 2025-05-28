@@ -100,7 +100,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Attacks'"
+                  "Value": "'ECS Attacks'"
                 }
               }
             },
